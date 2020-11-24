@@ -105,6 +105,11 @@
           "default": "translate",
           "description": "The name of the pipe to handle the translation."
         },
+        "ngx-translate-utils.translocoFunc": {
+          "type": "boolean",
+          "default": false,
+          "description": "USe transloco func in html file instead pipe format"
+        },
         "ngx-translate-utils.translatePlaceholder": {
           "type": "string",
           "default": "this.translateService.instant({key})",
