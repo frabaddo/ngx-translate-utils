@@ -45,7 +45,8 @@ export async function generateTranslationString(context: vscode.ExtensionContext
         const quote = settings.quote;
         let translation = '';
         if (editor.document.languageId === 'html') {
-          translation = `{{${padding}${quote}${key}${quote} | ${settings.translatePipeName}${padding}}}`;
+          if(settings.translocoFunc) translation = `{{${padding}t(${quote}${key}${quote})${padding}}}`;
+          else translation = `{{${padding}${quote}${key}${quote} | ${settings.translatePipeName}${padding}}}`;
         } else if (editor.document.languageId === 'json') {
           translation = settings.translateJSONPlaceholder.replace('{key}', key || '');
         } else {
