@@ -7,6 +7,7 @@ export interface ConfigurationSettings extends vscode.WorkspaceConfiguration {
   autocapitalize: boolean;
   caseMode: string;
   replaceOnTranslate: boolean;
+  translocoFunc: boolean;
   translatePipeName: string;
   translatePlaceholder: string;
   translateJSONPlaceholder: string;
